@@ -23,5 +23,9 @@ namespace PSC.Controllers
             ViewBag.Gate = gateRepo.GetAllGate();
             return View(maskapai);
         }
+        public ActionResult Maskapai()
+        {
+            return View();
+        }
     }
 }

@@ -65,11 +65,15 @@
     <Compile Include="Controllers\GateController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MaskapaiController.cs" />
+    <Compile Include="Controllers\TransactionPassengerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Scripts\passenger\result.html" />
+    <Content Include="Scripts\passenger\PassengerResult.js" />
+    <Content Include="Scripts\passenger\TransactionPassenger.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap\css\bootstrap-responsive.css" />
@@ -172,6 +176,10 @@
       <Project>{A246A192-256A-46BB-86ED-0DB39547F9D5}</Project>
       <Name>PSC.ReportingRepository</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PSC.Repository\PSC.Repository.csproj">
+      <Project>{5DA51221-226C-49C2-A46F-163AE4121121}</Project>
+      <Name>PSC.Repository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PSC.Security\PSC.Security.csproj">
       <Project>{F289E698-D49E-435F-A112-A7516DDCE804}</Project>
       <Name>PSC.Security</Name>
@@ -179,6 +187,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout_Admin.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\passenger\transaction.html" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
