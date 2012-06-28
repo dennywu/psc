@@ -9,9 +9,22 @@ namespace PSC.Controllers
 {
     public class TransactionPassengerController : Controller
     {
+        ITransactionPassengerRepository passengerRepo;
+        public TransactionPassengerController()
+        {
+            passengerRepo = new TransactionPassengerRepository();
+        }
         public JsonResult Bayar(TransactionPassenger transaction)
         {
-            return Json(transaction, JsonRequestBehavior.AllowGet);
+            try
+            {
+                passengerRepo.AddTransactionPassenger(transaction);
+                return Json(new { error = false, data = transaction }, JsonRequestBehavior.AllowGet);
+            }
+            catch (ApplicationException ex)
+            {
+                return Json(new { error = true, data = ex.Message }, JsonRequestBehavior.AllowGet);
+            }
         }
     }
 }

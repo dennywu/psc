@@ -1,14 +1,16 @@
 ﻿@using PSC.Models
 @{
-    if(this.Request.IsAuthenticated){
-        //LoginInfo loginInfo = new LoginInfo(this.Context);
-        //if(loginInfo.RoleId == 0){
+    if (this.Request.IsAuthenticated)
+    {
+        LoginInfo loginInfo = new LoginInfo(this.Context);
+        if (loginInfo.RoleId == 0)
+        {
             Layout = "~/Views/Shared/_Layout_Admin.cshtml";
-        //}
-        //else{
-            //Layout = "~/Views/Shared/_Layout_Manager.cshtml";
-        //}
-        Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+        }
+        else
+        {
+            Layout = "~/Views/Shared/_Layout_Manager.cshtml";
+        }
     }
     else
     {

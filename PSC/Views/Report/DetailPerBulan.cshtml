@@ -1,0 +1,56 @@
+﻿<script src="@Url.Content("~/Scripts/report/reportDetailPerBulan.js")" type="text/javascript"></script>
+<div class='container'>
+    <div class='span6 offset2'>
+    <div class='row'>Pilih tanggal dari dan tanggal sampai untuk melihat detail transaksi passenger per bulan</div>
+    <div class='row'>
+        <br />
+        <form action='/Report/DetailPerBulan' method="post">
+            <div class='span6'>
+                <div class='3'>
+                    <div>Dari</div>
+                    <div>
+                        <select id='fromMonth' name='fromMonth'>
+                            <option value='01'>Januari</option>
+                            <option value='02'>Febuari</option>
+                            <option value='03'>Maret</option>
+                            <option value='04'>April</option>
+                            <option value='05'>Mei</option>
+                            <option value='06'>Juni</option>
+                            <option value='07'>Juli</option>
+                            <option value='08'>Agustus</option>
+                            <option value='09'>September</option>
+                            <option value='10'>Oktober</option>
+                            <option value='11'>November</option>
+                            <option value='12'>Desember</option>
+                        </select>
+                        <input type='number' id='fromYear' name='fromYear'/>
+                    </div>
+                </div>
+                <div class='3'>
+                    <div>Sampai</div>
+                    <div>
+                        <select id='toMonth' name='toMonth'>
+                            <option value='01'>Januari</option>
+                            <option value='02'>Febuari</option>
+                            <option value='03'>Maret</option>
+                            <option value='04'>April</option>
+                            <option value='05'>Mei</option>
+                            <option value='06'>Juni</option>
+                            <option value='07'>Juli</option>
+                            <option value='08'>Agustus</option>
+                            <option value='09'>September</option>
+                            <option value='10'>Oktober</option>
+                            <option value='11'>November</option>
+                            <option value='12'>Desember</option>
+                        </select>
+                        <input type='number' id='toYear' name='toYear'/>
+                    </div>
+                </div>
+                <div class='row'>
+                    <button class='btn btn-success btn-large' type="submit">Cari</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,41 @@
+﻿@using PSC.ReportingRepository
+@model IList<PSC.ReportingRepository.DetailTransactionMonthly>
+@{
+    int i = 1;
+    decimal total = 0;
+}
+<script type="text/javascript" src="@Url.Content("~/Scripts/PrintDocument.js")"></script>
+<script src="@Url.Content("~/Scripts/report/reportDetailPerBulan.js")" type="text/javascript"></script>
+<div class='container'>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span10">
+          <table class="table table-striped" id="tblReport">
+             <thead><tr><th>#</th><th>Bulan-Tahun</th><th>Jumlah</th><th></th></tr></thead>
+             <tbody>
+                
+                @foreach (DetailTransactionMonthly d in @Model)
+                {
+                    <tr>
+                        <td>@i</td>
+                        <td>@d.Tanggal</td>
+                        <td>Rp. @d.Amount.ToString("N")</td>
+                    </tr>
+                    i++;
+                    total += d.Amount;
+                }
+                <tr>
+                    <td></td>
+                    <td><b>Total Akhir</b></td>
+                    <td><b>Rp. @total.ToString("N")</b></td>
+                </tr>
+             </tbody>
+             
+          </table>
+        </div>
+        <div class="span2">
+          <button class='btn btn-primary' onclick="PrintLaporan()">Cetak</button>
+        </div>
+      </div>
+    </div>
+</div>

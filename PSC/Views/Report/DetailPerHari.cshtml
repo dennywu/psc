@@ -1,0 +1,24 @@
+﻿<script src="@Url.Content("~/Scripts/report/report.js")" type="text/javascript"></script>
+<div class='container'>
+    <div class='span6 offset2'>
+    <div class='row'>Pilih tanggal dari dan tanggal sampai untuk melihat detail transaksi passenger per hari</div>
+    <div class='row'>
+        <br />
+        <form action='/Report/DetailPerHari' method="post">
+            <div class='span6'>
+                <div class='3'>
+                    <div>Dari</div>
+                    <div><input type='text' id='fromDate' name='fromDate'/></div>
+                </div>
+                <div class='3'>
+                    <div>Sampai</div>
+                    <div><input type='text' id='toDate' name='toDate'/></div>
+                </div>
+                <div class='row'>
+                    <button class='btn btn-success btn-large' type="submit">Cari</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+</div>

@@ -45,6 +45,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountReportingRepository.cs" />
+    <Compile Include="IPegawaiRepository.cs" />
+    <Compile Include="models\DetailTransactionMonthly.cs" />
+    <Compile Include="models\DetailTransactionDaily.cs" />
+    <Compile Include="interface\IReportRepository.cs" />
+    <Compile Include="models\DetailTransaction.cs" />
     <Compile Include="GateReportingRepository.cs" />
     <Compile Include="interface\IGateReportingRepository.cs" />
     <Compile Include="interface\IMaskapaiReportingRepository.cs" />
@@ -53,8 +58,11 @@
     <Compile Include="models\Gate.cs" />
     <Compile Include="models\Maskapai.cs" />
     <Compile Include="models\Account.cs" />
+    <Compile Include="Pegawai.cs" />
+    <Compile Include="PegawaiRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportingRepositoryHelper.cs" />
+    <Compile Include="ReportRepository.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

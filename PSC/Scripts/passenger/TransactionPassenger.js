@@ -37,6 +37,14 @@ function clearAllField() {
     $("#amount").val('');
     $("#jenispenerbangan").empty().text("-");
 }
+function clearAll() {
+    $("#amount").val('');
+    $("#jenispenerbangan").empty().text("-");
+    $("#notransaction").val('');
+    $("#maskapai").val(0);
+    $("#namapassenger").val('');
+    $("#flightno").val('');
+}
 function findJenisPenerbanganById(id) {
     if (id == 1)
         return PASSENGER.JenisPenerbangan.Domestik;
@@ -52,7 +60,7 @@ function Bayar() {
     pessanger.Gate = $("#gate").text();
     pessanger.PassengerName = $("#namapassenger").val();
     pessanger.FlightNo = $("#flightno").val();
-    if (pessanger.TransactionNo == "" || pessanger.Tanggal == "" || pessanger.Maskapai == "" || pessanger.JenisPenerbangan == "" || pessanger.Amount == "" || pessanger.PassengerName == "" || pessanger.FlightNo == "" || pessanger.Gate == "") {
+    if (pessanger.TransactionNo == "" || pessanger.Tanggal == "" || pessanger.Maskapai == "" || pessanger.JenisPenerbangan == "" || pessanger.Amount == "" || pessanger.Gate == "") {
         return errorMessage("Semua field harus diisi.");
     }
 

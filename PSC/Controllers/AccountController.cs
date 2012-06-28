@@ -41,7 +41,8 @@ namespace PSC.Controllers
                     ModelState.AddModelError("", ex.Message);
                     return View(model);
                 }
-
+                LoginInfo cp = new LoginInfo(this.HttpContext);
+                cp.RoleId = acc.Role;
                 FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
                 if (Url.IsLocalUrl(returnUrl) && returnUrl.Length > 1 && returnUrl.StartsWith("/")
                     && !returnUrl.StartsWith("//") && !returnUrl.StartsWith("/\\"))
