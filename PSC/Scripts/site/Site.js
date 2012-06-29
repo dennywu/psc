@@ -6,7 +6,4 @@
     $('.dropdown input, .dropdown label').click(function (e) {
         e.stopPropagation();
     });
-    $(document).ready(function () {
-        $('.pix_diapo').diapo();
-    });
 });

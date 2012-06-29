@@ -8,20 +8,21 @@ using PSC.ReportingRepository;
 namespace PSC.Controllers
 {
     [Authorize]
-    public class HomeController : Controller
+    public class MaskapaiController : Controller
     {
         IMaskapaiReportingRepository maskapaiRepo;
-        IGateReportingRepository gateRepo;
-        public HomeController()
+        public MaskapaiController()
         {
             maskapaiRepo = new MaskapaiReportingRepository();
-            gateRepo = new GateReportingRepository();
         }
         public ActionResult Index()
         {
-            IList<Maskapai> maskapai = maskapaiRepo.GetAllMaskapai();
-            ViewBag.Gate = gateRepo.GetAllGate();
-            return View(maskapai);
+            return View();
+        }
+        public JsonResult GetById(int id)
+        {
+            Maskapai maskapai = maskapaiRepo.GetById(id);
+            return Json(maskapai, JsonRequestBehavior.AllowGet);
         }
     }
 }
