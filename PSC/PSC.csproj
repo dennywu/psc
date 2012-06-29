@@ -238,6 +238,33 @@
   <ItemGroup>
     <Content Include="Views\Pegawai\Index.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pegawai\AddPegawai.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pegawai\UpdatePegawai.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Pegawai\IndexManager.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Maskapai\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Maskapai\UpdateMaskapai.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Maskapai\AddMaskapai.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Gate\AddGate.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Gate\UpdateGate.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Gate\Index.cshtml" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

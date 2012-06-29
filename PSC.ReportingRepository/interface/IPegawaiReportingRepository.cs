@@ -5,8 +5,9 @@ using System.Text;
 
 namespace PSC.ReportingRepository
 {
-    public interface IPegawaiRepository
+    public interface IPegawaiReportingRepository
     {
         IList<Pegawai> GetAll();
+        Pegawai GetPegawaiById(int id);
     }
 }

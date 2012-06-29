@@ -44,7 +44,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ITransactionPassengerRepository.cs" />
+    <Compile Include="GateRepository.cs" />
+    <Compile Include="interface\IGateRepository.cs" />
+    <Compile Include="models\AddGate.cs" />
+    <Compile Include="models\AddMaskapai.cs" />
+    <Compile Include="interface\IMaskapaiRepository.cs" />
+    <Compile Include="interface\IPegawaiRepository.cs" />
+    <Compile Include="interface\ITransactionPassengerRepository.cs" />
+    <Compile Include="MaskapaiRepository.cs" />
+    <Compile Include="models\AddPegawai.cs" />
+    <Compile Include="models\UpdateGate.cs" />
+    <Compile Include="models\UpdateMaskapai.cs" />
+    <Compile Include="models\UpdatePegawai.cs" />
+    <Compile Include="PegawaiRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="models\TransactionPassenger.cs" />
     <Compile Include="TransactionPassengerRepository.cs" />

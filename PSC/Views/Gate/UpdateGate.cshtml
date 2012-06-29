@@ -1,0 +1,15 @@
+﻿@model PSC.ReportingRepository.Gate
+<form action="/Gate/UpdateGate" method="post">
+    <div class='container'>
+        <div class='row'><h3>Ubah Gate</h3></div>
+        <div class='row span9'>
+            <div class='span3'>
+                <div>Nama Gate</div>
+                <div><input type='hidden' name='id' value='@Model.Id'/><input type='text' name='name' value='@Model.Name'/></div>
+            </div>
+        </div>
+        <div class='row span12'>
+            <button class='btn btn-success offset1' type="submit">Simpan</button>
+        </div>
+    </div>
+</form>

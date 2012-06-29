@@ -13,6 +13,8 @@ function getCurrentMonth() {
     return ("0" + (currDate.getMonth() + 1)).slice(-2)
 }
 function PrintLaporan() {
+    $("#attn").show();
     var result = $("#tblReport");
     result.jqprint();
+    $("#attn").hide();
 }

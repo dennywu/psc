@@ -1,0 +1,49 @@
+﻿@using PSC.ReportingRepository
+@model IList<PSC.ReportingRepository.Pegawai>
+@{
+    int i = 1;
+}
+<div class='container'>
+    <div class='container-fluid'>
+        <div class='row-fluid'>
+            <div class='span9'>
+                <table class="table table-striped" id="tblListPasien">
+                    <thead><tr><th>#</th><th>Nama Pegawai</th><th>NIP</th><th>TTL</th><th>Alamat</th><th>Agama</th><th>Telpon</th><th></th></tr></thead>
+                    <tbody>
+                        @foreach (Pegawai p in Model)
+                        {
+                            <tr>
+                                <td>@i</td>
+                                <td>@p.Name</td>
+                                <td>@p.NIP</td>
+                                <td>@p.TTL</td>
+                                <td>@p.Alamat</td>
+                                <td>@p.Agama</td>
+                                <td>@p.Telpon</td>
+                                <td>
+                                    <div class='btn-group'>
+                                        <a class='btn dropdown-toggle btn-mini' data-toggle='dropdown' href='#'>
+                                            Action
+                                            <span class='caret'></span>
+                                        </a>
+                                        <ul class='dropdown-menu' >
+                                            <li>@Html.ActionLink("Ubah","UpdatePegawai",new { pegawaiId = p.Id })</li>
+                                            <li>@Html.ActionLink("Hapus", "DeletePegawai", new { pegawaiId = p.Id })</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            i++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class='span3'>
+                <div>
+                    <a href="/Pegawai/AddPegawai" class="btn btn-success">Tambah Pegawai</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="temp-contain"></div>

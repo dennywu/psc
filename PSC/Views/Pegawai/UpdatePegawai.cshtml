@@ -1,0 +1,43 @@
+﻿@model PSC.ReportingRepository.Pegawai
+<form action="/Pegawai/UpdatePegawai" method="post">
+    <div class='container'>
+        <div class='row'><h3>Ubah Pegawai</h3></div>
+        <div class='row span9'>
+            <div class='span3'>
+                <div>Nama Pegawai</div>
+                <div><input type='hidden' name='id' value='@Model.Id'/><input type='text' name='name' value='@Model.Name'/></div>
+            </div>
+            <div class='span3'>
+                <div>NIP</div>
+                <div><input type='text' name='nip' value='@Model.NIP'/></div>
+            </div>
+            <div class='span3'>
+                <div>TTL</div>
+                <div><input type='text' name='ttl' value='@Model.TTL'/></div>
+            </div>
+            <div class='span3'>
+                <div>Alamat</div>
+                <div><textarea name='alamat'>@Model.Alamat</textarea></div>
+            </div>
+            <div class='span3'>
+                <div>Agama</div>
+                <div>
+                    <select name='agama'>
+                        <option value='Islam' selected>Islam</option>
+                        <option value='Buddha'>Buddha</option>
+                        <option value='Kristen'>Kristen</option>
+                        <option value='Katolik'>Katolik</option>
+                        <option value='Hindu'>Hindu</option>
+                    </select>
+                </div>
+            </div>
+            <div class='span3'>
+                <div>Telepon</div>
+                <div><input type='text' name='Telpon' value='@Model.Telpon'/></div>
+            </div>
+        </div>
+        <div class='row span12'>
+            <button class='btn btn-success offset1' type="submit">Simpan</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,24 @@
+﻿<form action="/Maskapai/AddMaskapai" method="post">
+    <div class='container'>
+        <div class='row'><h3>Tambah Maskapai</h3></div>
+        <div class='row span9'>
+            <div class='span3'>
+                <div>Nama Maskapai</div>
+                <div><input type='text' name='name'/></div>
+            </div>
+            <div class='span3'>
+                <div>Jenis Penerbangan</div>
+                <div>
+                    <select name='jenisid'>
+                        <option value='0' selected>--NONE--</option>
+                        <option value='1'>Domestik</option>
+                        <option value='2'>Internasional</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class='row span12'>
+            <button class='btn btn-success offset1' type="submit">Simpan</button>
+        </div>
+    </div>
+</form>

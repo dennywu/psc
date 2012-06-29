@@ -19,6 +19,8 @@ function setDatePicker() {
     });
 }
 function PrintLaporan() {
+    $("#attn").show();
     var result = $("#tblReport");
     result.jqprint();
+    $("#attn").hide();
 }

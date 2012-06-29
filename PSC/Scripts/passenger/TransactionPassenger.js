@@ -1,7 +1,7 @@
 ﻿function initTransactionPassenger() {
     $("#pagecontainer").empty();
     $("#pagecontainer").load("/Scripts/passenger/transaction.html");
-    setTimeout(setData, 500);
+    setTimeout(setData, 1000);
 }
 function setData() {
     for (var i = 0; i < PASSENGER.Maskapai.length; i++) {

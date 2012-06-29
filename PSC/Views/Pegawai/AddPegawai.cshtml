@@ -1,0 +1,42 @@
+﻿<form action="/Pegawai/AddPegawai" method="post">
+    <div class='container'>
+        <div class='row'><h3>Tambah Pegawai</h3></div>
+        <div class='row span9'>
+            <div class='span3'>
+                <div>Nama Pegawai</div>
+                <div><input type='text' name='name'/></div>
+            </div>
+            <div class='span3'>
+                <div>NIP</div>
+                <div><input type='text' name='nip'/></div>
+            </div>
+            <div class='span3'>
+                <div>TTL</div>
+                <div><input type='text' name='ttl'/></div>
+            </div>
+            <div class='span3'>
+                <div>Alamat</div>
+                <div><textarea name='alamat'></textarea></div>
+            </div>
+            <div class='span3'>
+                <div>Agama</div>
+                <div>
+                    <select name='agama'>
+                        <option value='Islam' selected>Islam</option>
+                        <option value='Buddha'>Buddha</option>
+                        <option value='Kristen'>Kristen</option>
+                        <option value='Katolik'>Katolik</option>
+                        <option value='Hindu'>Hindu</option>
+                    </select>
+                </div>
+            </div>
+            <div class='span3'>
+                <div>Telepon</div>
+                <div><input type='text' name='Telpon'/></div>
+            </div>
+        </div>
+        <div class='row span12'>
+            <button class='btn btn-success offset1' type="submit">Simpan</button>
+        </div>
+    </div>
+</form>

@@ -29,9 +29,23 @@
                     <td><b>Total Akhir</b></td>
                     <td><b>Rp. @total.ToString("N")</b></td>
                 </tr>
+                <tr>
+                    <td colspan='3'>
+                        <div class='row' id='attn' style='display:none;'>
+                        <br /><br /><br /><br />
+                        <div style='width:300px;float:left;'>[..............................]</div>
+                        <div style='width:300px;float:right;text-align:right;'>[..............................]</div>
+                        </div>
+                    </td>
+                </tr>
              </tbody>
              
           </table>
+        </div>
+        <div class='span10' id='attn' style='display:none;'>
+            <br /><br /><br /><br />
+            <div class='span5 center'>[.....................]</div>
+            <div class='span5 center'>[.....................]</div>
         </div>
         <div class="span2">
           <button class='btn btn-primary' onclick="PrintLaporan()">Cetak</button>

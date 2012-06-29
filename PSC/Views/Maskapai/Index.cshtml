@@ -1,0 +1,46 @@
+﻿@using PSC.ReportingRepository
+@model IList<PSC.ReportingRepository.Maskapai>
+@{
+    int i = 1;
+}
+<div class='container'>
+    <div class='container-fluid'>
+        <div class='row-fluid'>
+            <div class='span9'>
+                <table class="table table-striped" id="tblListPasien">
+                    <thead><tr><th>#</th><th>Nama Maskapai</th><th>Jenis Penerbangan</th><th>Biaya</th></tr></thead>
+                    <tbody>
+                        @foreach (Maskapai p in Model)
+                        {
+                            <tr>
+                                <td>@i</td>
+                                <td>@p.Name</td>
+                                <td>@p.JenisName</td>
+                                <td>@p.Amount</td>
+                                <td>
+                                    <div class='btn-group'>
+                                        <a class='btn dropdown-toggle btn-mini' data-toggle='dropdown' href='#'>
+                                            Action
+                                            <span class='caret'></span>
+                                        </a>
+                                        <ul class='dropdown-menu' >
+                                            <li>@Html.ActionLink("Ubah","UpdateMaskapai",new { maskapaiId = p.Id })</li>
+                                            <li>@Html.ActionLink("Hapus", "DeleteMaskapai", new { maskapaiId = p.Id })</li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            i++;
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <div class='span3'>
+                <div>
+                    <a href="/Maskapai/AddMaskapai" class="btn btn-success">Tambah Maskapai</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="temp-contain"></div>
