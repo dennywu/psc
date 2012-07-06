@@ -21,6 +21,7 @@ namespace PSC.ReportingRepository
             {
                 maskapai.Add(new Maskapai(reader["id"].ToInt(), reader["name"].ToString(), reader["jenisid"].ToInt(),reader["jenisname"].ToString(),reader["amount"].ToDecimal()));
             }
+            reader.Close();
             return maskapai;
         }
         public Maskapai GetById(int id)
@@ -31,6 +32,7 @@ namespace PSC.ReportingRepository
             {
                 maskapai = new Maskapai(reader["id"].ToInt(), reader["name"].ToString(), reader["jenisid"].ToInt(),reader["jenisname"].ToString(),reader["amount"].ToDecimal());
             }
+            reader.Close();
             return maskapai;
         }
     }

@@ -21,6 +21,7 @@ namespace PSC.ReportingRepository
             {
                 gates.Add(new Gate(reader["id"].ToInt(), reader["gatename"].ToString()));
             }
+            reader.Close();
             return gates;
         }
         public Gate GetById(int id)
@@ -31,6 +32,7 @@ namespace PSC.ReportingRepository
             {
                 gate = new Gate(reader["id"].ToInt(), reader["gatename"].ToString());
             }
+            reader.Close();
             return gate;
         }
     }

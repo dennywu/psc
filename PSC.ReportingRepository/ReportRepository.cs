@@ -19,6 +19,7 @@ namespace PSC.ReportingRepository
             {
                 details.Add(new DetailTransaction(reader["transactiondate"].ToString(), reader["notransaction"].ToString(), reader["flightno"].ToString(), reader["maskapai"].ToString(), reader["amount"].ToDecimal()));
             }
+            reader.Close();
             return details;
         }
         public IList<DetailTransactionDaily> GetDetailTransactionDailyByDate(string from, string to)
@@ -29,6 +30,7 @@ namespace PSC.ReportingRepository
             {
                 details.Add(new DetailTransactionDaily(reader["transactiondate"].ToString(),reader["total"].ToDecimal()));
             }
+            reader.Close();
             return details;
         }
 
@@ -44,6 +46,7 @@ namespace PSC.ReportingRepository
             {
                 details.Add(new DetailTransactionMonthly(reader["ym"].ToString(), reader["amount"].ToDecimal()));
             }
+            reader.Close();
             return details;
         }
     }

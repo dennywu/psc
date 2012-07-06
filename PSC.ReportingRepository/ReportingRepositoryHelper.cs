@@ -16,7 +16,6 @@ namespace PSC.ReportingRepository
             if(reader != null)
                 reader.Dispose();
             reader = cmd.ExecuteReader();
-            //conn.Close();
             return reader;
         }
         public static int ToInt(this object data)

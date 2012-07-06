@@ -21,6 +21,7 @@ namespace PSC.ReportingRepository
             {
                 acc = new Account(int.Parse(reader["userid"].ToString()), reader["username"].ToString(), reader["password"].ToString(), int.Parse(reader["role"].ToString()));
             }
+            reader.Close();
             return acc;
         }
     }

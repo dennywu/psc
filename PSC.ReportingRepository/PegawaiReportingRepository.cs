@@ -18,6 +18,7 @@ namespace PSC.ReportingRepository
             {
                 pegawai.Add(new Pegawai(reader["id"].ToInt(),reader["nama"].ToString(), reader["nip"].ToString(), reader["ttl"].ToString(), reader["agama"].ToString(),reader["alamat"].ToString(),reader["notelp"].ToString()));
             }
+            reader.Close();
             return pegawai;
         }
 
@@ -29,6 +30,7 @@ namespace PSC.ReportingRepository
             {
                 pegawai = new Pegawai(reader["id"].ToInt(), reader["nama"].ToString(), reader["nip"].ToString(), reader["ttl"].ToString(), reader["agama"].ToString(), reader["alamat"].ToString(), reader["notelp"].ToString());
             }
+            reader.Close();
             return pegawai;
         }
     }

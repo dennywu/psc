@@ -19,6 +19,7 @@ namespace PSC.Repository
             conn.Open();
             MySqlCommand command = new MySqlCommand(cmd, conn);
             command.ExecuteReader();
+            conn.Close();
         }
     }
 }

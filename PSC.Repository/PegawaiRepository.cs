@@ -17,6 +17,7 @@ namespace PSC.Repository
             conn.Open();
             MySqlCommand command = new MySqlCommand(cmd, conn);
             command.ExecuteReader();
+            conn.Close();
         }
         public void UpdatePegawai(UpdatePegawai p)
         {
@@ -26,6 +27,7 @@ namespace PSC.Repository
             conn.Open();
             MySqlCommand command = new MySqlCommand(cmd, conn);
             command.ExecuteReader();
+            conn.Close();
         }
         public void DeletePegawai(int id)
         {
@@ -34,6 +36,7 @@ namespace PSC.Repository
             conn.Open();
             MySqlCommand command = new MySqlCommand(cmd, conn);
             command.ExecuteReader();
+            conn.Close();
         }
     }
 }

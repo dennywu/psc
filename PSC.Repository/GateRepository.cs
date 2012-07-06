@@ -16,6 +16,7 @@ namespace PSC.Repository
             conn.Open();
             MySqlCommand command = new MySqlCommand(cmd, conn);
             command.ExecuteReader();
+            conn.Close();
         }
         public void UpdateGate(UpdateGate m)
         {
@@ -25,6 +26,7 @@ namespace PSC.Repository
             conn.Open();
             MySqlCommand command = new MySqlCommand(cmd, conn);
             command.ExecuteReader();
+            conn.Close();
         }
         public void DeleteGate(int id)
         {
@@ -33,6 +35,7 @@ namespace PSC.Repository
             conn.Open();
             MySqlCommand command = new MySqlCommand(cmd, conn);
             command.ExecuteReader();
+            conn.Close();
         }
     }
 }
