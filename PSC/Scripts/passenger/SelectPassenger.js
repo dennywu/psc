@@ -16,6 +16,7 @@ function getMaskapai() {
             type: 'GET',
             url: '/Maskapai/GetById?id=' + $(".maskapai:checked")[i].value,
             dataType: 'json',
+            async:false,
             success: function (data) {
                 PASSENGER.Maskapai[maskapaiLength] = {};
                 PASSENGER.Maskapai[maskapaiLength].Id = data.Id;
@@ -35,6 +36,7 @@ function getGate() {
         type: 'GET',
         url: '/Gate/GetById?id=' + gateid,
         dataType: 'json',
+        async: false,
         success: function (data) {
             PASSENGER.Gate.Id = data.Id;
             PASSENGER.Gate.Name = data.Name;

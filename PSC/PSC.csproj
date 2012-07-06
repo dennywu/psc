@@ -91,6 +91,14 @@
     <Content Include="Content\css\redmond\images\ui-icons_d8e7f3_256x240.png" />
     <Content Include="Content\css\redmond\images\ui-icons_f9bd01_256x240.png" />
     <Content Include="Content\css\redmond\jquery-ui-1.8.21.custom.css" />
+    <Content Include="Images\HomeSlider\1.jpg" />
+    <Content Include="Images\HomeSlider\2.jpg" />
+    <Content Include="Images\HomeSlider\diapo\next.png" />
+    <Content Include="Images\HomeSlider\diapo\pause.png" />
+    <Content Include="Images\HomeSlider\diapo\play.png" />
+    <Content Include="Images\HomeSlider\diapo\prev.png" />
+    <Content Include="Images\HomeSlider\thumbs\1.jpg" />
+    <Content Include="Images\HomeSlider\thumbs\2.jpg" />
     <Content Include="Scripts\CurrencyRounding.js" />
     <Content Include="Scripts\jquery-ui-1.8.21.custom.min.js" />
     <Content Include="Scripts\passenger\result.html" />
@@ -189,7 +197,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Images\HomeSlider\thumbs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
