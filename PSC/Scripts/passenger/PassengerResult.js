@@ -10,6 +10,7 @@
 function setResult(data) {
     $("#resultamount").text("Rp. " + data.Amount.toCurrency(2));
     $("#resulttanggal").text(data.Tanggal.toDefaultFormatDate());
+    $("#resulttransactionno").text(data.TransactionNo);
     $("#resultmaskapai").text(data.Maskapai);
     $("#resultjenispenerbangan").text(data.JenisPenerbangan);
     $("#resultflightno").text(data.FlightNo);

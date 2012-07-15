@@ -18,6 +18,7 @@ namespace PSC.Controllers
         {
             try
             {
+                transaction.TransactionNo = Guid.NewGuid().ToString().GetHashCode().ToString("x");
                 passengerRepo.AddTransactionPassenger(transaction);
                 return Json(new { error = false, data = transaction }, JsonRequestBehavior.AllowGet);
             }
